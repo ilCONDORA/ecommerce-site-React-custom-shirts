@@ -1,0 +1,213 @@
+.products-favs-container {
+  width: 100%;
+}
+.products-favs {
+  width: 1.3rem;
+  height: 1.3rem;
+  transition: var(--transition);
+  color: rgb(255, 255, 255, 0.7);
+  cursor: pointer;
+}
+.products-favs:hover {
+  color: var(--color-primary);
+}
+.men,
+.kid,
+.women {
+  background-color: var(--color-variant);
+  color: var(--text-color-variant);
+  display: flex;
+  justify-content: center;
+}
+.men {
+  width: 100%;
+  padding: 7.5rem 0 2.5rem 0;
+}
+.women,
+.kid {
+  width: 100%;
+  padding: 2.5rem;
+}
+.product-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
+  background: linear-gradient(
+    to bottom,
+    var(--color-variant),
+    var(--color-primary)
+  );
+  padding: 0 5rem 5rem 5rem;
+}
+.product-card {
+  background: linear-gradient(to bottom, transparent, rgb(0, 0, 0, 0.5));
+  width: 20rem;
+  padding: 2rem;
+  border-radius: 7px;
+  transition: var(--transition);
+  position: relative;
+}
+.products-favs:hover {
+  color: var(--color-primary);
+  transform: scale(1.2);
+}
+.tee-container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+#added-image-from-admin {
+  position: absolute;
+  height: 3rem;
+  width: auto;
+  top: 4rem;
+}
+.product-card img {
+  width: 15rem;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  position: relative;
+}
+.card-body .title {
+  color: var(--text-color-variant);
+  font-size: 16px;
+}
+
+.size-p,
+.color-p,
+.material-p {
+  justify-content: space-between;
+}
+.size-p,
+.color-p,
+.material-p {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.size-p button {
+  width: 1.5rem;
+  height: 1.5rem;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: rgb(0, 0, 0, 0.5);
+  color: var(--color-primary);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.selected {
+  background-color: var(--color-primary) !important ;
+  color: var(--text-color) !important;
+}
+
+.size-p button:hover {
+  background-color: var(--color-primary);
+  color: var(--text-color);
+}
+.size-p button:active {
+  background-color: var(--color-primary);
+  color: var(--text-color);
+}
+.card-body .price {
+  font-size: 14px;
+  color: var(--text-color-variant);
+}
+.color-box {
+  width: 1rem;
+  height: 1rem;
+  outline: none;
+  border: 1px solid rgb(255, 255, 255, 0.2);
+  border-radius: 4px;
+  transition: var(--transition);
+}
+.color-p #white {
+  background-color: white;
+  cursor: pointer;
+}
+.color-p #black {
+  background-color: black;
+  cursor: pointer;
+}
+.color-p #gray {
+  background-color: gray;
+  cursor: pointer;
+}
+.color-p #blue {
+  background-color: blue;
+  cursor: pointer;
+}
+.color-p #red {
+  background-color: red;
+  cursor: pointer;
+}
+
+#white:hover,
+#black:hover,
+#gray:hover,
+#blue:hover,
+#red:hover {
+  transform: scale(1.2);
+}
+
+#material-select {
+  border-radius: 2px;
+  padding: 2px 5px;
+  align-items: center;
+  cursor: pointer;
+  min-height: 36px;
+  pointer-events: all;
+  position: relative;
+  width: 11rem !important;
+  border: 1px solid var(--color-primary) !important;
+  color: var(--color-primary) !important;
+  outline: none !important;
+  box-shadow: none !important;
+  font-size: 0.8rem !important;
+  background: linear-gradient(
+    to bottom,
+    transparent 20%,
+    rgb(255, 255, 255, 0.1)
+  );
+}
+.products-btn-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+.button-p {
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  background-color: var(--color-variant);
+  color: var(--color-primary);
+  transition: var(--transition);
+  cursor: pointer;
+}
+.button-p:hover {
+  background-color: var(--color-primary);
+  color: var(--text-color);
+}
+
+@media screen and (max-width: 416px) {
+  .men {
+    padding-top: 2.5rem;
+  }
+  .product-container {
+    gap: 3rem;
+  }
+}
+@media screen and (max-width: 880px) {
+  .product-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}

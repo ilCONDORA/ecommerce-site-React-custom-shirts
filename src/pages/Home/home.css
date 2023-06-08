@@ -1,0 +1,364 @@
+/*-------------HERO SECTION--------------------*/
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url("../../assets/img/hero-bg.svg") no-repeat center;
+  background-size: cover;
+  padding: 13rem 7rem 9rem 8rem;
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+}
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 5rem;
+}
+.right {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.right img {
+  width: 43rem;
+  height: 43rem;
+  margin-top: 5rem;
+}
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.title h1 {
+  font-size: 4rem;
+  color: transparent;
+  -webkit-text-stroke: 0.7px var(--color-primary);
+}
+.title h5 {
+  font-weight: 300;
+  font-size: 1rem;
+  color: var(--text-color-variant);
+}
+.cta button {
+  padding: 1rem 2.5rem;
+  border-radius: 5px;
+  border: 1px solid var(--color-primary);
+  cursor: pointer;
+  background-color: var(--color-primary);
+  color: var(--text-color);
+  transition: var(--transition);
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+.right-arrow {
+  font-size: 1.5rem;
+}
+.cta button:hover {
+  background-color: transparent;
+  color: var(--color-primary);
+}
+
+/*-------------HOW TO USE SECTION--------------------*/
+.how-to-use-container {
+  background-color: var(--color-primary);
+  color: var(--text-color-variant);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+  width: 100%;
+}
+.how-to-use-container h1 {
+  font-size: 2rem;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 15rem);
+  column-gap: 7rem;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+.card img {
+  width: 17rem;
+  height: 17rem;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  object-fit: cover;
+  box-shadow: var(--shadows);
+}
+.card p {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  height: 3rem;
+  color: var(--text-color);
+}
+
+/*-------------PRODUCTS SLIDER SECTION--------------------*/
+.products-slider {
+  width: 100%;
+  background-color: var(--color-variant);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 2.5rem 0;
+}
+.products-slider h1 {
+  display: flex;
+  justify-content: center;
+  color: var(--text-color-variant);
+  font-size: 2rem;
+}
+.swiper {
+  width: 100% !important;
+  padding: 0 5rem !important;
+  height: 24.5rem !important;
+}
+.swiper-slide {
+  width: 18rem !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1rem !important;
+  background: linear-gradient(
+    to bottom,
+    rgb(147, 112, 219, 0.3),
+    transparent 80%
+  ) !important ;
+  border-radius: 7px !important;
+}
+.slider img {
+  width: 18rem;
+  height: 16rem;
+  padding: 2rem 2rem 0 2rem;
+  cursor: pointer;
+}
+.slider p {
+  color: var(--text-color-variant);
+  padding-left: 2rem;
+}
+
+/*-------------VISION CARD--------------------*/
+.vision-container {
+  background: url(../../assets/img/vision-bg.jpg) no-repeat center;
+  background-size: cover;
+  height: 35rem;
+  position: relative;
+  width: 100vw;
+}
+
+/*-------------RECALL TO ACTION--------------------*/
+.rta h1 {
+  font-size: 4rem;
+  background: url("../../assets/img/back.png");
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-position: 0 0;
+  animation: backmove 120s linear alternate infinite;
+  cursor: pointer;
+  position: absolute;
+  left: 7rem;
+  bottom: 5rem;
+}
+@keyframes backmove {
+  100% {
+    background-position: 10000px 0;
+  }
+}
+
+/*-------------TEE SLIDER--------------------*/
+.tee-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 15rem;
+  height: 20rem;
+  z-index: 0;
+  position: absolute;
+  bottom: -6.5rem;
+  overflow: hidden;
+  background: none;
+  margin-left: 0.5rem;
+}
+.tee-slide img {
+  height: 13rem;
+  width: 13rem;
+  object-fit: contain;
+}
+
+/*-------------MEDIA QUERIES FOR MOBILE DEVICES--------------------*/
+@media screen and (max-width: 415px) {
+  /*HERO*/
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    background: none;
+    background-color: black;
+    padding: 3rem 0 !important;
+  }
+  .left {
+    width: 100vw;
+    padding: 0 1.5rem;
+    align-items: center;
+  }
+  .title h1 {
+    font-size: 1.7rem;
+  }
+  .title h5 {
+    max-width: 100%;
+  }
+  .right img {
+    width: 20rem;
+    height: 20rem;
+    margin-top: 2rem;
+  }
+  .tee-slider-container {
+    bottom: 7rem;
+    width: 10rem;
+    height: 10rem;
+    margin-right: 0.5rem;
+  }
+  .tee-slide img {
+    height: 6rem;
+    width: 6rem;
+  }
+
+  /*HOWTOUSE*/
+  .how-to-use-container h1 {
+    font-size: 1.5rem;
+  }
+  .card p {
+    width: 10rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /*PRODUCTSSLIDER*/
+  .products-slider h1 {
+    font-size: 1.5rem;
+  }
+  .swiper-slide {
+    width: 15rem !important;
+    align-items: center !important;
+  }
+  .slider p {
+    font-size: 0.9rem;
+    margin-right: 1.5rem;
+  }
+
+  /*RECALLTOACTION*/
+  .rta h1 {
+    font-size: 2rem !important;
+    bottom: 3rem !important;
+    left: 1rem !important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .hero {
+    padding: 9rem 5rem 5rem 5rem;
+  }
+  .right {
+    margin-top: 6rem;
+  }
+  .tee-slide img {
+    width: 10rem;
+    height: 10rem;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .title h1 {
+    font-size: 3rem;
+  }
+  .title h5 {
+    font-size: 0.9rem;
+  }
+  .cta button {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (max-width: 1092px) {
+  /*HERO*/
+  .hero {
+    background: none;
+    background-color: var(--color-variant);
+    gap: 2.5rem;
+  }
+  .right {
+    margin-top: 0;
+    background: linear-gradient(
+      to bottom,
+      rgb(147, 112, 219, 0.3),
+      transparent
+    );
+    border-radius: 7px;
+  }
+  .right img {
+    width: 30rem;
+    height: 30rem;
+    margin-top: 0;
+  }
+
+  .tee-slide img {
+    width: 8rem;
+    height: 8rem;
+  }
+  .tee-slider-container {
+    width: 15rem;
+    height: 15rem;
+    top: 5rem;
+  }
+  /*HOW-TO-USE*/
+  .cards {
+    grid-template-columns: repeat(2, 10rem);
+    column-gap: 14rem;
+    row-gap: 2rem;
+  }
+}
+@media screen and (max-width: 940px) {
+  .hero {
+    flex-direction: column;
+    height: auto;
+  }
+  .left {
+    gap: 2rem;
+  }
+  .cta button {
+    padding: 1rem 1.5rem;
+  }
+  .rta h1 {
+    font-size: 3rem;
+    bottom: 2rem;
+    left: 2rem;
+  }
+}
+@media screen and (max-width: 760px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 600px) {
+  .right img {
+    width: 20rem;
+    height: 20rem;
+  }
+  .tee-slider-container {
+    width: 10rem;
+    height: 10rem;
+    top: 4rem;
+  }
+  .tee-slide img {
+    width: 6rem;
+    height: 6rem;
+  }
+}

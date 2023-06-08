@@ -1,0 +1,42 @@
+.error-container{
+    display: flex;
+    height: 100vh;
+    justify-content: flex-end;
+    align-items: center;
+    font-size: 3rem;
+    background-color: black;
+    flex-direction: column;
+  
+}
+.error-container img{
+    width: 20rem;
+    height: 20rem;
+}
+.error-container h1{
+    text-decoration: none;
+    color: transparent;
+    -webkit-text-stroke: 5px rgb(193, 107, 227);
+    background: url("../../assets/img/back.png");
+    animation: backmove 120s linear alternate infinite;
+    background-clip: text;
+    background-position: 0 0;
+}
+
+@keyframes backmove {
+    100% {
+      background-position: 10000px 0;
+    }
+  }
+
+@media screen  and (max-width:500px) {
+    .error-container{
+        font-size:0.9rem;
+    }
+    .error-container h1{
+        -webkit-text-stroke: 0.7px rgb(193, 107, 227);
+
+    }
+    .error-container img{
+        margin-top: 8rem;
+    }
+}
